@@ -85,7 +85,10 @@ public class MyArrayLIst<T> implements MyList<T> {
         if (size == 0) {
             throw new NoSuchElementException();
         }
-        T item = arr[size-1];
+        T item = arr[0];
+        for (int i = 0; i < size-1; i++) {
+            arr[i] = arr[i+1];
+        }
         arr[size-1] = null;
         size--;
         return item;
