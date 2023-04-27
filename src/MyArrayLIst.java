@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.NoSuchElementException;
 public class MyArrayLIst<T> implements MyList<T> {
     private T[] arr;
     private int size;
@@ -79,6 +80,16 @@ public class MyArrayLIst<T> implements MyList<T> {
         for (int i = index + 1; i < size; i++) {
             arr[i - 1] = arr[i];
         }
+        size--;
+    }
+    public void removeFirst() { // removes the first elements
+        if (size == 0) {
+            throw new NoSuchElementException();
+        }
+        for (int i = 0; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[size - 1] = null;
         size--;
     }
 
