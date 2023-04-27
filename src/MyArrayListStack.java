@@ -6,4 +6,7 @@ public class MyArrayListStack<T> extends MyArrayLIst {
     public void push(T item){
         arr.addFirst(item);
     }
+    public int size(){
+        return arr.size();
+    }
 }
