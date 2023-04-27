@@ -1,5 +1,6 @@
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public  class MyLinkedList<E> implements MyList<E> {
     private static class Node<E>{
@@ -101,6 +102,13 @@ public  class MyLinkedList<E> implements MyList<E> {
             }
             current = current.next;
         }
+    }
+    public void removeFirst() {
+        if (size == 0) {
+            throw new NoSuchElementException();
+        }
+        head = head.next;
+        size--;
     }
 
     @Override
