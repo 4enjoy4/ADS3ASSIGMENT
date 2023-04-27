@@ -4,4 +4,5 @@ public class MyLinkedListStack <E> extends MyLinkedList{
     public MyLinkedListStack() {
         list = new MyLinkedList<>();
     }
+
 }

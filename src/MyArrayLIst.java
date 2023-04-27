@@ -62,7 +62,6 @@ public class MyArrayLIst<T> implements MyList<T> {
         arr[0] = item; // Insert the new element at the beginning of the array
         size++; // Increment the size of the ArrayList
     }
-
     @Override
     public void remove(T item) {
         int newIndex = 0;

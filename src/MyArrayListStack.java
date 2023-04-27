@@ -12,6 +12,7 @@ public class MyArrayListStack<T> extends MyArrayLIst {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
+
         return arr.removeFirst();
     }
     public T peek(){

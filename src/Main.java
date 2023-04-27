@@ -11,6 +11,7 @@ public class Main {
         stack.pop();
         System.out.println("peek after pop " + stack.peek() +" the size " + stack.size() );
         System.out.println(stack.isEmpty());
+
     }
 
     }
