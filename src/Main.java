@@ -5,9 +5,9 @@ public class Main {
         stack.push(2);
         stack.push(2323);
         stack.push(3);
-        System.out.println("peek " + stack.peek());
+        System.out.println("peek " + stack.peek() + " the size" + stack.size());
         stack.pop();
-        System.out.println("peek after pop " + stack.peek() );
+        System.out.println("peek after pop " + stack.peek() +" the size " + stack.size() );
         }
 
     }
