@@ -7,4 +7,10 @@ public class MyLinkedListStack <E> extends MyLinkedList{
     public void push(E item){
         list.addFirst(item);
     }
+    public int size(){
+        return list.size();
+    }
+    public boolean isEmpty(){
+        return list.isEmpty();
+    }
 }
