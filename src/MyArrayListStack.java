@@ -1,4 +1,5 @@
 import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 public class MyArrayListStack<T> extends MyArrayLIst {
     private MyArrayLIst<T> arr;
     public MyArrayListStack(){
@@ -8,9 +9,10 @@ public class MyArrayListStack<T> extends MyArrayLIst {
         arr.addFirst(item);
     }
     public T pop(){
-        T element = peek(); // get the element at the top of the stack
-        removeFirst(); // remove the element at the top of the stack
-        return element; // return the element that was removed
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return arr.removeFirst();
     }
     public T peek(){
         if(isEmpty()){
