@@ -8,7 +8,7 @@ public class Main {
         stack.push(2323);
         stack.push(3);
         System.out.println("peek " + stack.peek() + " the size" + stack.size());
-        stack.pop();
+         stack.pop();
         System.out.println("peek after pop " + stack.peek() +" the size " + stack.size() );
         System.out.println(stack.isEmpty());
     }
