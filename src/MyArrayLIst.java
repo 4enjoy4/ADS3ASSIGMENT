@@ -83,7 +83,7 @@ public class MyArrayLIst<T> implements MyList<T> {
         size--;
     }
     public void removeFirst() { // removes the first elements
-        if (size == 0) {
+        if (size == 0) { // If the ArrayList is empty, a NoSuchElementException is thrown.
             throw new NoSuchElementException();
         }
         for (int i = 0; i < size - 1; i++) {
@@ -91,6 +91,15 @@ public class MyArrayLIst<T> implements MyList<T> {
         }
         arr[size - 1] = null;
         size--;
+    }
+    public T getFirst() {
+        if (size == 0) {
+            throw new NoSuchElementException();
+        }
+        return arr[0];
+    }
+    public boolean isEmpty() {
+        return size == 0;
     }
 
     @Override
