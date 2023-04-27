@@ -16,6 +16,10 @@ public class Main {
         stackL.push(3);
         stackL.push(2);
         stackL.push(9);
+        System.out.println("peek of linked list " + stackL.peek() + " the size " + stackL.size());
+        stackL.pop();
+        System.out.println("peek after pop " + stackL.peek() +" the size " + stackL.size() );
+        stackL.isEmpty();
     }
 
     }
