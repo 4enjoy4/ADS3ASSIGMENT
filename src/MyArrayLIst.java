@@ -86,19 +86,19 @@ public class MyArrayLIst<T> implements MyList<T> {
         if (size == 0) { // If the ArrayList is empty, a NoSuchElementException is thrown.
             throw new NoSuchElementException();
         }
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) { // shifts the elements to the left by one position, removing first element
             arr[i] = arr[i + 1];
         }
         arr[size - 1] = null;
         size--;
     }
     public T getFirst() {
-        if (size == 0) {
+        if (size == 0) { // if it is empty it throws exception
             throw new NoSuchElementException();
         }
-        return arr[0];
+        return arr[0]; // returns the first element of array
     }
-    public boolean isEmpty() {
+    public boolean isEmpty() { //return true if array is empty, otherwise false
         return size == 0;
     }
 

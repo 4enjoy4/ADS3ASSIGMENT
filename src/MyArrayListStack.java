@@ -3,7 +3,7 @@ public class MyArrayListStack<T> extends MyArrayLIst {
     public MyArrayListStack(){
         arr = new MyArrayLIst<>();
     }
-    public void oush(T item){
+    public void push(T item){
         arr.addFirst(item);
     }
 }
