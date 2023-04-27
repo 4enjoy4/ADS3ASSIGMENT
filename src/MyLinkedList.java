@@ -70,6 +70,7 @@ public  class MyLinkedList<E> implements MyList<E> {
         }
         size++;
     }
+    public void addFirst(E item){}
 
     @Override
     public void remove(E item) {
