@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
         MyArrayListStack <Integer> stack = new MyArrayListStack<>();
@@ -8,6 +10,7 @@ public class Main {
         System.out.println("peek " + stack.peek() + " the size" + stack.size());
         stack.pop();
         System.out.println("peek after pop " + stack.peek() +" the size " + stack.size() );
-        }
+        System.out.println(stack.isEmpty());
+    }
 
     }
