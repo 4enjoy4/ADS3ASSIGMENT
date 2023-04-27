@@ -71,8 +71,14 @@ public  class MyLinkedList<E> implements MyList<E> {
         size++;
     }
     public void addFirst(E item){
-
-
+        head = new Node <E>(item, head, tail);
+        if (isEmpty()) {
+            tail = head;
+        }
+        size++;
+    }
+    public boolean isEmpty() { //return true if array is empty, otherwise false
+        return size == 0;
     }
 
 

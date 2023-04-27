@@ -4,5 +4,7 @@ public class MyLinkedListStack <E> extends MyLinkedList{
     public MyLinkedListStack() {
         list = new MyLinkedList<>();
     }
-
+    public void push(E item){
+        list.addFirst(item);
+    }
 }
