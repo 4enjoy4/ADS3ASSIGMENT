@@ -7,6 +7,18 @@ public class MyLinkedListStack <E> extends MyLinkedList{
     public void push(E item){
         list.addFirst(item);
     }
+    public E pop(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return list.removeFirst();
+    }
+    public E peek(){
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return list.getFirst();
+    }
     public int size(){
         return list.size();
     }

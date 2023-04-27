@@ -81,6 +81,12 @@ public  class MyLinkedList<E> implements MyList<E> {
     public boolean isEmpty() { //return true if array is empty, otherwise false
         return size == 0;
     }
+    public E getFirst() {
+        if (size == 0) {
+            throw new NoSuchElementException();
+        }
+        return head.element;
+    }
 
 
     @Override
@@ -103,13 +109,17 @@ public  class MyLinkedList<E> implements MyList<E> {
             current = current.next;
         }
     }
-    public void removeFirst() {
-        if (size == 0) {
+    public E removeFirst() {
+        if (head == null) {
             throw new NoSuchElementException();
         }
+        Node<E> temp = head;
         head = head.next;
+        temp.next = null;
         size--;
+        return temp.element;
     }
+
 
     @Override
     public void remove(int index) {
