@@ -51,6 +51,16 @@ public class MyArrayLIst<T> implements MyList<T> {
         arr[index] = (T) item;
         size++;
     }
+    public void addFirst(T item){
+        if(size == arr.length){ // Check if the array is full, and increase its size if necessary
+            increaseBuffer();
+        }
+        for (int i = size; i > 0; i--) { // Shift all existing elements to the right
+            arr[i] = arr[i-1];
+        }
+        arr[0] = item; // Insert the new element at the beginning of the array
+        size++; // Increment the size of the ArrayList
+    }
 
     @Override
     public void remove(T item) {
