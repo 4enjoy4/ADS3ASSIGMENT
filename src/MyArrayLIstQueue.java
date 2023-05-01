@@ -1,28 +1,30 @@
+import java.util.NoSuchElementException;
+
 public class MyArrayLIstQueue<T> extends MyArrayLIst {
-    private MyArrayLIst<T> arr;
     public MyArrayLIstQueue(){
-        arr = new MyArrayLIst<>();
+        super();
     }
-    public int size(){
-        return arr.size();
+    public int sizeQueue(){
+        return super.size();
+    }
+    public boolean isEmptyQueue(){
+        return super.isEmpty();
     }
     public void enqueue(T item){
-        arr.add(item);
+        super.add(item);
     }
     public T dequeue(){
         if(isEmpty()){
-            return null;
+            throw new NoSuchElementException();
         }
-        else{
-            return arr.removeLast();
-        }
+        return (T) super.removeFirst();
     }
     public T peek(){
         if(isEmpty()){
-            return null;
+            throw new NoSuchElementException();
         }
         else{
-           return arr.getFirst();
+           return (T) super.getLast();
         }
     }
 

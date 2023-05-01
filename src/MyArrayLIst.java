@@ -90,18 +90,7 @@ public class MyArrayLIst<T> implements MyList<T> {
         }
         size--;
     }
-    public T removeLast() {
-        if (isEmpty()) {
-            throw new NoSuchElementException();
-        }
-        T item = arr[0];
-        for (int i = 0; i < size - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-        arr[size - 1] = null;
-        size--;
-        return item;
-    }
+
     public T removeFirst() { // removes the first elements
         if (size == 0) {
             throw new NoSuchElementException();
@@ -119,6 +108,12 @@ public class MyArrayLIst<T> implements MyList<T> {
             throw new NoSuchElementException();
         }
         return arr[0]; // returns the first element of array
+    }
+    public T getLast() {
+        if (size == 0) { // if it is empty it throws exception
+            throw new NoSuchElementException();
+        }
+        return arr[size -1]; // returns the first element of array
     }
     public boolean isEmpty() { //return true if array is empty, otherwise false
         return size == 0;

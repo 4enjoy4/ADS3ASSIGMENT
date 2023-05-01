@@ -20,6 +20,17 @@ public class Main {
         stackL.pop();
         System.out.println("peek after pop " + stackL.peek() +", the size " + stackL.size() );
         System.out.println(stackL.isEmpty());
+        MyArrayLIstQueue<Integer> queue = new MyArrayLIstQueue<>();
+        queue.enqueue(1);
+        queue.enqueue(24);
+        queue.enqueue(34);
+        queue.enqueue(4);
+        queue.enqueue(67);
+        System.out.println(queue.sizeQueue());
+        System.out.println(queue.peek());
+        queue.dequeue();
+        System.out.println(queue.sizeQueue());
+        System.out.println(queue.sizeQueue());
     }
 
     }
