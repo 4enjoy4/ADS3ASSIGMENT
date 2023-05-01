@@ -3,16 +3,16 @@ public class MyLinkedListQueue<E> extends MyLinkedList<E> {
     public MyLinkedListQueue() {
         super();
     }
-    public boolean empty() {
-        return size() == 0;
+    public boolean emptyqueue() {
+        return isEmpty();
     }
 
-    public int size() {
+    public int sizequeue() {
         return super.size();
     }
 
     public E peek() {
-        if (empty()) {
+        if (isEmpty()) {
             return null;
         }
         return getFirst();
@@ -23,7 +23,7 @@ public class MyLinkedListQueue<E> extends MyLinkedList<E> {
     }
 
     public E dequeue() {
-        if (empty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         }
         return removeFirst();

@@ -30,7 +30,20 @@ public class Main {
         System.out.println(queue.peek());
         queue.dequeue();
         System.out.println(queue.sizeQueue());
-        System.out.println(queue.sizeQueue());
+
+        MyLinkedListQueue<Integer> q = new MyLinkedListQueue<>();
+        System.out.println("Queue: ");
+        q.enqueue(10);
+        q.enqueue(15);
+        q.enqueue(20);
+        q.enqueue(25);
+        q.enqueue(30);
+        System.out.println(q.sizequeue());
+        System.out.println(q.peek());
+        q.dequeue();
+        System.out.println(q.peek());
+        q.enqueue(40);
+        System.out.println(q.sizequeue());
     }
 
     }

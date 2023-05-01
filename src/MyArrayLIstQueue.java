@@ -24,7 +24,7 @@ public class MyArrayLIstQueue<T> extends MyArrayLIst {
             throw new NoSuchElementException();
         }
         else{
-           return (T) super.getLast();
+           return (T) super.getFirst();
         }
     }
 
