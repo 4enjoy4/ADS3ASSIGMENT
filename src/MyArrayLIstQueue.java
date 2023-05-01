@@ -15,7 +15,12 @@ public class MyArrayLIstQueue<T> extends MyArrayLIst {
         }
     }
     public T peek(){
-
+        if(isEmpty()){
+            return null;
+        }
+        else{
+           return arr.getFirst();
+        }
     }
 
 }
