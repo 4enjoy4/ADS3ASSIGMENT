@@ -3,6 +3,7 @@ import org.w3c.dom.ls.LSOutput;
 public class Main {
     public static void main(String[] args) {
         MyArrayListStack <Integer> stack = new MyArrayListStack<>();
+        System.out.println("Array list stack: ");
         stack.push(1);
         stack.push(2);
         stack.push(2323);
@@ -12,6 +13,7 @@ public class Main {
         System.out.println("peek after pop " + stack.peek() +", the size " + stack.size() );
         System.out.println(stack.isEmpty());
         MyLinkedListStack <Integer> stackL = new MyLinkedListStack<>();
+        System.out.println("Linked list stack: ");
         stackL.push(1);
         stackL.push(3);
         stackL.push(2);
@@ -20,7 +22,9 @@ public class Main {
         stackL.pop();
         System.out.println("peek after pop " + stackL.peek() +", the size " + stackL.size() );
         System.out.println(stackL.isEmpty());
+
         MyArrayLIstQueue<Integer> queue = new MyArrayLIstQueue<>();
+        System.out.println("Array list queue");
         queue.enqueue(1);
         queue.enqueue(24);
         queue.enqueue(34);
@@ -32,7 +36,7 @@ public class Main {
         System.out.println(queue.sizeQueue());
 
         MyLinkedListQueue<Integer> q = new MyLinkedListQueue<>();
-        System.out.println("Queue: ");
+        System.out.println("Linked list queue: ");
         q.enqueue(10);
         q.enqueue(15);
         q.enqueue(20);
