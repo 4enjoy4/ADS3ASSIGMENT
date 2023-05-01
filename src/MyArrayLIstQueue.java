@@ -3,6 +3,9 @@ public class MyArrayLIstQueue<T> extends MyArrayLIst {
     public MyArrayLIstQueue(){
         arr = new MyArrayLIst<>();
     }
+    public int size(){
+        return arr.size();
+    }
     public void enqueue(T item){
         arr.add(item);
     }
