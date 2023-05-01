@@ -71,6 +71,17 @@ public  class MyLinkedList<E> implements MyList<E> {
         }
         size++;
     }
+    public void addLast(E element){
+        Node<E> newNode = new Node<>(element, null, null);
+        if(tail == null){
+            head = tail = newNode;
+        }
+        else{
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size ++;
+    }
     public void addFirst(E item){
         head = new Node <E>(item, head, tail);
         if (isEmpty()) {
