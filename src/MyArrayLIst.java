@@ -62,6 +62,15 @@ public class MyArrayLIst<T> implements MyList<T> {
         arr[0] = item; // Insert the new element at the beginning of the array
         size++; // Increment the size of the ArrayList
     }
+    public  T removeLast(T item){
+        if(size == 0){
+            throw new NoSuchElementException();
+        }
+        item = arr[size - 1];
+        arr[size - 1] = null;
+        size--;
+        return item;
+    }
     @Override
     public void remove(T item) {
         int newIndex = 0;
@@ -80,6 +89,18 @@ public class MyArrayLIst<T> implements MyList<T> {
             arr[i - 1] = arr[i];
         }
         size--;
+    }
+    public T removeLast() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        T item = arr[0];
+        for (int i = 0; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[size - 1] = null;
+        size--;
+        return item;
     }
     public T removeFirst() { // removes the first elements
         if (size == 0) {
@@ -157,5 +178,4 @@ public class MyArrayLIst<T> implements MyList<T> {
             }
         }
     }
-
 }
